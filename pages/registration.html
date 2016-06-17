@@ -1,0 +1,52 @@
+<h3>Enter details below for registration:</h3>
+<div style="color:red">Fields marked with * are compulsory</br></br></div>
+<form class="form-horizontal" role="form" name="clientDetails">
+	<div class="form-group">
+		<label for="firstname" class="col-sm-2 control-label">First Name*</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="firstName" id="firstname" placeholder="Enter First Name" ng-model="firstName" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="lastname" class="col-sm-2 control-label">Last Name*</label>
+		<div class="col-md-3">
+			<input type="text" name= "lastName" class="form-control" id="lastname" placeholder="Enter Last Name" ng-model="lastName" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="age" class="col-sm-2 control-label">Registration No.</label>
+		<div class="col-md-2">
+			<input type="text" name= "registrationNo" class="form-control" id="age" placeholder="" ng-model="registrationNo" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="age" class="col-sm-2 control-label">Age*</label>
+		<div class="col-md-2">
+			<input type="text" name= "age" class="form-control" id="age" placeholder="Enter age in years" ng-model="age" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="height" class="col-sm-2 control-label">Height</label>
+		<div class="col-md-2">
+			<input type="text" name= "height" class="form-control" id="height" placeholder="Enter height in cm" ng-model="height">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="education" class="col-sm-2 control-label">Educational level</label>
+		<div class="col-md-3">
+			<input type="text" name= "height" class="form-control" id="education" placeholder="Educational level" ng-model="education">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="profession" class="col-sm-2 control-label">Profession*</label>
+		<div class="col-md-3">
+			<input type="text" name= "profession" class="form-control" id="profession" placeholder="Fill in the profession" ng-model="profession" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-default" ng-click="register()" ng-disabled="clientDetails.firstName.$error.required || clientDetails.lastName.$error.required || clientDetails.age.$error.required || clientDetails.profession.$error.required">Register</button>
+		</div>
+	</div>
+</form>
+{{message}}

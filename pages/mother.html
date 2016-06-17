@@ -1,0 +1,18 @@
+<div class="page-header" class="col-md-4">
+  	<h1>Mothers Department</h1>
+</div>
+<h4>Enter Client's unique ID to enroll a client to a series of programs available in this department</h4><br><br>
+<form class="form-horizontal" role="form" name="clientIDForm">
+	<div class="form-group">
+		<label for="clientID" class="col-sm-2 control-label">Unique ID</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="clientID" id="clientID-mother" placeholder="Enter Client ID" ng-model="clientID" required>
+		</div>
+		<label for="clientID" class="col-sm-2 control-label">Registration date</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="regDate" id="regDate" placeholder="Registration Date (yyyy-mm-dd)" ng-model="regDate" required>
+		</div>
+			<button type="submit" class="btn btn-primary" ng-click="register()" ng-disabled="clientIDForm.clientID.$error.required||clientIDForm.regDate.$error.required">Enroll</button>
+	</div>
+</form>
+{{message}}

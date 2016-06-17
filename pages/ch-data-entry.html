@@ -1,0 +1,169 @@
+<div id="ch-stage-1" style="display:block;">
+<h3>Fill in dates for vaccinations child was given:</h3>
+	<form class="form-horizontal" role="form" name="ch-stage-1" id="form-ch-stage-1">
+	<div class="form-group">
+		<label for="CH1" class="col-sm-2 control-label">BCG vaccination given</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="CH1" id="CH1" placeholder="yyyy-mm-dd" ng-model="FP1" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="CH2" class="col-sm-2 control-label">Polio vaccination given</label>
+		<div class="col-md-3">
+			<input type="text" name= "CH2" class="form-control" id="CH2" placeholder="yyyy-mm-dd" ng-model="CH2" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="CH3" class="col-sm-2 control-label">DTP-Hep B</label>
+		<div class="col-md-2">
+			<input type="text" name= "CH3" class="form-control" id="CH3" placeholder="yyyy-mm-dd" ng-model="CH3" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="CH4" class="col-sm-2 control-label">PNEUMOCOCCAL</label>
+		<div class="col-md-2">
+			<input type="text" name= "CH4" class="form-control" id="CH4" placeholder="yyyy-mm-dd" ng-model="CH4" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="CH5" class="col-sm-2 control-label">ROTA</label>
+		<div class="col-md-2">
+			<input type="text" name= "CH5" class="form-control" id="CH5" placeholder="yyyy-mm-dd" ng-model="FP5">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="CH6" class="col-sm-2 control-label">measles</label>
+		<div class="col-md-3">
+			<input type="text" name= "CH6" class="form-control" id="CH6" placeholder="yyyy-mm-dd" ng-model="CH6">
+		</div>
+		<button type="submit" class="btn btn-default" ng-click="formStageOne()" ng-disabled="">Save</button>
+		<button type="submit" id="go-to-stage-2" class="btn btn-primary" ng-click="formStageOneSwitcher()">&raquo;</button></br></br>
+	</div>
+	</form>
+	{{messageOne}}
+</div>
+
+
+<div id="ch-stage-2" style="display:none; padding-left:5%;">
+	<h4>Client's health history</h4>
+	<form class="" role="form" name="form-ch-stage-2" id="form-ch-stage-2">
+		<label for="CH7">Headache</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="CH7" id="CH7" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="CH7" id="CH7b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="CH8">Yellow fever</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="CH8" id="CH8" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="CH8" id="CH8b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-default" ng-click="formStageTwo()" ng-disabled="">Save</button>
+		<button type="submit" id="go-to-stage-3" class="btn btn-primary" ng-click="formStageTwoSwitcher()">&raquo;</button></br></br>
+	</div>
+	</form>
+	{{messageTwo}}
+</div>
+
+
+<div id="ch-stage-3" style="display:none; padding-left:5%;">
+	<h3>Infant progress track</h3>
+	<form class="form-horizontal" role="form" name="form-ch-stage-2" id="form-ch-stage-2">
+	<div class="form-group">
+		<label for="CH9" class="col-sm-2 control-label">Weight</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="CH9" id="CH9" placeholder="" ng-model="CH9" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="CH10" class="col-sm-2 control-label">Haemoglobin deficit</label>
+		<div class="col-md-3">
+			<input type="text" name= "CH10" class="form-control" id="CH10" placeholder="" ng-model="CH10" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="CH11" class="col-sm-2 control-label">Temperature</label>
+		<div class="col-md-2">
+			<input type="text" name= "CH11" class="form-control" id="CH11" placeholder="" ng-model="CH11" required>
+		</div>
+	</div>
+	<div style="padding-left:18%;">
+	<label for="CH12">Mother's milk</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="CH12" id="CH12" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="CH12" id="CH12b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="CH13" class="col-sm-2 control-label">Eye cleanliness</label>
+		<div class="col-md-2">
+			<input type="text" name= "CH13" class="form-control" id="CH13" placeholder="" ng-model="CH13" required>
+		</div>
+	</div>
+	<div style="padding-left:18%;">
+	<label for="CH14">Skin is yellow</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="CH14" id="CH14" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="CH14" id="CH14b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="CH15" class="col-sm-2 control-label">Return date</label>
+		<div class="col-md-2">
+			<input type="text" name= "CH15" class="form-control" id="CH15" placeholder="" ng-model="CH15" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="CH16" class="col-sm-2 control-label">Nurse's name</label>
+		<div class="col-md-2">
+			<input type="text" name= "CH16" class="form-control" id="CH16" placeholder="" ng-model="CH16" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="CH17" class="col-sm-2 control-label">Nurse's position</label>
+		<div class="col-md-2">
+			<input type="text" name= "CH17" class="form-control" id="CH17" placeholder="" ng-model="CH17" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="CH18" class="col-sm-2 control-label">Nurse's description</label>
+		<div class="col-md-3">
+			<input type="textarea" name= "CH18" class="form-control" id="CH18" placeholder="" ng-model="CH18" required>
+		</div>
+	</div>
+	<div style="padding-left:30%;">
+		<button type="submit" class="btn btn-default" ng-click="formStageThree()" ng-disabled="">Save</button>
+	</div>
+	</form>
+</div>

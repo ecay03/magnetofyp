@@ -1,0 +1,735 @@
+<div id="mother-stage-1" style="display:block;">
+<h3>Fill in details about mother's past deliveries:</h3>
+<div style="color:red">All fields are compulsory</br></br></div>
+	<form class="form-horizontal" role="form" name="form-mother-stage-1" id="form-mother-stage-1">
+	<div class="form-group">
+		<label for="MO1" class="col-sm-2 control-label">Total number of pregnancies to date</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="MO1" id="MO1" placeholder="" ng-model="MO1" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO2" class="col-sm-2 control-label">Number of past deliveries</label>
+		<div class="col-md-3">
+			<input type="text" name= "MO2" class="form-control" id="MO2" placeholder="" ng-model="MO2" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO3" class="col-sm-2 control-label">Number of kids vivant</label>
+		<div class="col-md-2">
+			<input type="text" name= "MO3" class="form-control" id="MO3" placeholder="" ng-model="MO3" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO4" class="col-sm-2 control-label">Number of miscarriages</label>
+		<div class="col-md-2">
+			<input type="text" name= "MO4" class="form-control" id="MO4" placeholder="" ng-model="MO4" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO5" class="col-sm-2 control-label">Miscarriage year (if more than one select latest)</label>
+		<div class="col-md-2">
+			<input type="text" name= "MO5" class="form-control" id="MO5" placeholder="" ng-model="MO5">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO6" class="col-sm-2 control-label">How old was the pregnancy before miscarriage</label>
+		<div class="col-md-3">
+			<input type="text" name= "MO6" class="form-control" id="MO6" placeholder="" ng-model="MO6">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO7" class="col-sm-2 control-label">Last menstruation date</label>
+		<div class="col-md-3">
+			<input type="text" name= "MO7" class="form-control" id="MO7" placeholder="" ng-model="MO7" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO8" class="col-sm-2 control-label">Expected delivery date</label>
+		<div class="col-md-3">
+			<input type="text" name= "MO8" class="form-control" id="MO8" placeholder="" ng-model="MO8" required>
+		</div>
+		<button type="submit" class="btn btn-default" ng-click="formStageOne()" ng-disabled="">Save</button>
+		<button type="submit" id="go-to-stage-2" class="btn btn-primary" ng-click="formStageOneSwitcher()">&raquo;</button></br></br>
+	</div>
+	</form>
+	{{messageOne}}
+</div>
+
+
+<div id="mother-stage-2" style="display:none; padding-left:5%;">
+	<div style="color:red">Take mother for further investigation if she has 'Yes' status for any of these</br></br></div>
+	<form class="" role="form" name="form-mother-stage-2" id="form-mother-stage-2">
+		<label for="MO9">Age below 20 years</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO9" id="MO9" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO9" id="MO9b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO9">10 years or more since last pregnancy</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO10" id="M10" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO10" id="M10b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO9">Mother has ever had delivery by operation</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO11" id="MO11" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO11" id="MO11b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO9">Delivery to deceased infant</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO12" id="MO12" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO12" id="MO12b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO9">Two or more miscarriages</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO13" id="MO13" value="Yes" checked> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO13" id="MO13b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO9">Heart disease</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO14" id="MO14" value="Yes" checked> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO14" id="MO14b" value="No"> No
+				</label>
+			</div>
+		</div>
+		<label for="MO9">Diabetes mellitus</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO15" id="MO15" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO15" id="MO15b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO9">Tuberculosis</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO16" id="MO16" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO16" id="MO16b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<div style="padding-left:30%;">
+			<button type="submit" class="btn btn-default" ng-click="formStageTwo()" ng-disabled="">Save</button>
+			<button type="submit" id="go-to-stage-3" class="btn btn-primary" ng-click="formStageTwoSwitcher()">&raquo;</button></br></br>
+		</div>
+	</form>
+	{{messageTwo}}
+</div>
+
+
+<div id="mother-stage-3" style="display:none; padding-left:5%;">
+	<h4>Ask if mother has ever had any of these cases</h4>
+	<div style="color:red">Mother is strictly reccommended to give birth in hospital if she has 'Yes' status for any of these</br></br></div>
+	<form class="" role="form" name="form-mother-stage-2" id="form-mother-stage-2">
+		<label for="MO17">Fifth pregnancy or more</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO17" id="MO17" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO17" id="MO17" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO18">1Height less than 150cm</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO18" id="MO18" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO18" id="MO18" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO19">Cervix complications</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO11" id="MO19" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO19" id="MO19" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO20">First pregnancy at age at least 35 years</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO20" id="MO20" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO20" id="MO20" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO21">Delivery by vacuum rupture</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO21" id="MO21" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO21" id="MO21" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO22">Post delivery over bleeding</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO22" id="MO22" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO22" id="MO22" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<div style="padding-left:30%;">
+			<button type="submit" class="btn btn-default" ng-click="formStageThree()" ng-disabled="">Save</button>
+			<button type="submit" id="go-to-stage-4" class="btn btn-primary" ng-click="formStageThreeSwitcher()">&raquo;</button></br></br>
+		</div>
+	</form>
+	{{messageThree}}
+</div>
+
+
+<div id="mother-stage-4" style="display:none;">
+<h3>Diagnosis on continuous attendance:</h3>
+<div style="color:red">All fields are compulsory</br></br></div>
+	<form class="form-horizontal" role="form" name="form-mother-stage-4" id="form-mother-stage-4">
+	<div class="form-group">
+		<label for="MO23" class="col-sm-2 control-label">Weight in Kg</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="MO23" id="MO23" placeholder="" ng-model="MO23" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO24" class="col-sm-2 control-label">Blood pressure (mmHg)</label>
+		<div class="col-md-3">
+			<input type="text" name= "MO24" class="form-control" id="MO24" placeholder="" ng-model="MO24" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO26" class="col-sm-2 control-label">Blood (gm/dl)</label>
+		<div class="col-md-2">
+			<input type="text" name= "MO26" class="form-control" id="MO26" placeholder="" ng-model="MO26" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO27" class="col-sm-2 control-label">Sugar in urine</label>
+		<div class="col-md-2">
+			<input type="text" name= "MO27" class="form-control" id="MO27" placeholder="" ng-model="MO27">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO28" class="col-sm-2 control-label">Pregnancy age (in weeks)</label>
+		<div class="col-md-3">
+			<input type="text" name= "MO28" class="form-control" id="MO28" placeholder="" ng-model="MO28">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO29" class="col-sm-2 control-label">Foetus orientation</label>
+		<div class="col-md-3">
+			<input type="text" name= "MO29" class="form-control" id="MO29" placeholder="" ng-model="MO29" required>
+		</div>
+	</div>
+	<div style="padding-left:18%;">
+	<label for="MO25">DCA Albumin in Urine</label>
+	<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO25" id="MO25" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO25" id="MO25" value="No" checked> No
+				</label>
+			</div>
+	</div>
+	<label for="MO30">Foetal movement noticed after 20 weeks</label>
+	<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO30" id="MO30" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO30" id="MO30" value="No" checked> No
+				</label>
+			</div>
+	</div>
+	<label for="MO31">Foetal heartbeats noticed after 20 weeks</label>
+	<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO31" id="MO31" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO31" id="MO31" value="No" checked> No
+				</label>
+			</div>
+	</div>
+	<label for="MO32">Legs enlargement-Oedema</label>
+	<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO32" id="MO32" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO32" id="MO32" value="No" checked> No
+				</label>
+			</div>
+	</div>
+	<label for="MO33">Malaria dose given?</label>
+	<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO33" id="MO33" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO33" id="MO33" value="No" checked> No
+				</label>
+			</div>
+	</div>
+	<label for="MO34">Mebendazole dose given?</label>
+	<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO34" id="MO34" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO34" id="MO34" value="No" checked> No
+				</label>
+			</div>
+	</div>
+	</div>
+	<div style="padding-left:30%;">
+			<button type="submit" class="btn btn-default" ng-click="formStageFour()" ng-disabled="">Save</button>
+			<button type="submit" id="go-to-stage-6" class="btn btn-primary" ng-click="formStageFourSwitcher()">&raquo;</button></br></br>
+		</div>
+	</form>
+	{{messageFour}}
+</div>
+
+
+<div id="mother-stage-5" style="display:none; padding-left:5%;">
+	<h4>Check on continuous attendance</h4>
+	<div style="color:red">Take mother to hospital if there are any danger signs</br></br></div>
+	<form class="" role="form" name="form-mother-stage-5" id="form-mother-stage-5">
+		<label for="MO35">Blood pressure above 140/90mmHg</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO35" id="MO35" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO35" id="MO35b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO36">Pregnancy age more than 40 weeks</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO36" id="MO36" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO36" id="MO36b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO37">Foetus died in the womb</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO37" id="MO37" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO37" id="MO37b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO38">Albumin in urine</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO38" id="MO38" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO38" id="MO38b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO39">Sugar in urine</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO39" id="MO39" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO39" id="MO39b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO40">Pregnancy for twins</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO40" id="MO40" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO40" id="MO40b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO41">Legs enlargement-Oedema</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO41" id="MO41" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO41" id="MO41b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO42">Foetus misorientation after week 36</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO42" id="MO42" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO42" id="MO42b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+		<label for="MO43" class="col-sm-2 control-label">*Where should mother attend for delivery</label>
+		<div class="col-md-3">
+			<input type="text" name= "MO43" class="form-control" id="MO43" placeholder="" ng-model="MO43">
+		</div>
+	</div>
+		<div style="padding-left:30%;">
+			<button type="submit" class="btn btn-default" ng-click="formStageFive()" ng-disabled="">Save</button>
+			<button type="submit" id="go-to-stage-5" class="btn btn-primary" ng-click="formStageFiveSwitcher()">&raquo;</button></br></br>
+		</div>
+	</form>
+	{{messageFive}}
+</div>
+
+
+<div id="mother-stage-6" style="display:none;">
+<h3>Records near birth</h3>
+<!--div style="color:red">All fields are compulsory</br></br></div-->
+	<form class="form-horizontal" role="form" name="form-mother-stage-6" id="form-mother-stage-6">
+	<div class="form-group">
+		<label for="MO44" class="col-sm-2 control-label">Admission date and time</label>
+		<div class="col-md-4">
+			<input type="text" class="form-control" name="MO44" id="MO44" placeholder="yyyy-mm-dd:hh-mm" ng-model="MO44" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO45" class="col-sm-2 control-label">Pregnancy age(in weeks)</label>
+		<div class="col-md-3">
+			<input type="text" name= "MO45" class="form-control" id="MO45" placeholder="" ng-model="MO45" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO46" class="col-sm-2 control-label">Foetus orientation</label>
+		<div class="col-md-2">
+			<input type="text" name= "MO46" class="form-control" id="MO46" placeholder="" ng-model="MO46" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO47" class="col-sm-2 control-label">Attendant comments</label>
+		<div class="col-md-2">
+			<input type="text" name= "MO47" class="form-control" id="MO47" placeholder="" ng-model="MO47">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO48" class="col-sm-2 control-label">Attendant name</label>
+		<div class="col-md-3">
+			<input type="text" name= "MO48" class="form-control" id="MO48" placeholder="" ng-model="MO48">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO49" class="col-sm-2 control-label">Attendant position</label>
+		<div class="col-md-3">
+			<input type="text" name= "MO49" class="form-control" id="MO49" placeholder="" ng-model="MO49" required>
+		</div>
+	</div>
+	<div style="padding-left:30%;">
+			<button type="submit" class="btn btn-default" ng-click="formStageSix()" ng-disabled="">Save</button>
+			<button type="submit" id="go-to-stage-6" class="btn btn-primary" ng-click="formStageSixSwitcher()">&raquo;</button></br></br>
+	</div>
+	</form>
+	{{messageSix}}
+</div>
+
+
+
+<div id="mother-stage-7" style="display:none; padding-left:5%;">
+	<h4>Prior to mother's admission fill these:</h4>
+	<div style="color:red">Mother is strictly reccommended to give birth in hospital if she has 'Yes' status for any of these</br></br></div>
+	<form class="" role="form" name="form-mother-stage-7" id="form-mother-stage-7">
+		<label for="MO50">Vaginal bleeding</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO50" id="MO50" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO50" id="MO50b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO51">Foetus changing heartbeat (below 120 or above 160 per second)</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO51" id="MO51" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO51" id="MO51b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO52">Foetus too large or cervix too narrow</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO52" id="MO52" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO52" id="MO52b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO53">Fever (above 38 centigrade)</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO53" id="MO53" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO53" id="MO53b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO54">Blood pressure above 140/90mmHg</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO54" id="MO54" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO54" id="MO54b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="MO55">Insufficient blood amount(below 8.5gm/dl)</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO55" id="MO55" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO55" id="MO55" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<div style="padding-left:30%;">
+			<button type="submit" class="btn btn-default" ng-click="formStageSeven()" ng-disabled="">Save</button>
+			<button type="submit" id="go-to-stage-8" class="btn btn-primary" ng-click="formStageSevenSwitcher()">&raquo;</button></br></br>
+		</div>
+	</form>
+	{{messageSeven}}
+</div>
+
+
+<div id="mother-stage-8" style="display:none;">
+<h3>Post natal report:</h3>
+<div style="color:red">All fields are compulsory</br></br></div>
+	<form class="form-horizontal" role="form" name="form-mother-stage-8" id="form-mother-stage-8">
+	<div class="form-group">
+		<label for="MO56" class="col-sm-2 control-label">Delivery date and time</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="MO56" id="MO56" placeholder="" ng-model="MO56" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO57" class="col-sm-2 control-label">Mode of delivery</label>
+		<div class="col-md-3">
+			<input type="text" name= "MO57" class="form-control" id="MO57" placeholder="" ng-model="MO57" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="MO58" class="col-sm-2 control-label">If operated on give reasons</label>
+		<div class="col-md-2">
+			<input type="text" name= "MO58" class="form-control" id="MO58" placeholder="" ng-model="MO58" required>
+		</div>
+	</div>
+	<div style="padding-left:18%;">
+	<label for="MO59">Episiotomy</label>
+	<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO59" id="MO59" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO59" id="MO59b" value="No" checked> No
+				</label>
+			</div>
+	</div>
+</div>
+	<div class="form-group">
+		<label for="MO60" class="col-sm-2 control-label">BP after delivery</label>
+		<div class="col-md-2">
+			<input type="text" name= "MO60" class="form-control" id="MO60" placeholder="" ng-model="MO60">
+		</div>
+	</div>
+	<div style="padding-left:18%;">
+	<label for="MO61">Vitamin given?</label>
+	<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO61" id="MO61" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO61" id="MO61b" value="No" checked> No
+				</label>
+			</div>
+	</div>
+	<label for="MO62">Eye drop given?</label>
+	<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO62" id="MO62" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="MO62" id="MO62b" value="No" checked> No
+				</label>
+			</div>
+	</div>
+</div>
+<div style="padding-left:30%;">
+	<button type="submit" class="btn btn-default" ng-click="formStageEight()" ng-disabled="">Save</button>
+	</br></br>
+</div>
+{{messageEight}}

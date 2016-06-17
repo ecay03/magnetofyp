@@ -1,0 +1,320 @@
+<div id="fp-stage-1" style="display:block;">
+<h3>Fill in details about client's background information</h3>
+<div style="color:red">All fields are compulsory</br></br></div>
+	<form class="form-horizontal" role="form" name="fp-stage-1" id="form-fp-stage-1">
+	<div class="form-group">
+		<label for="FP1" class="col-sm-2 control-label">Total number of pregnancies to date</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="FP1" id="FP1" placeholder="" ng-model="FP1" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="FP2" class="col-sm-2 control-label">Number of times mother has given birth</label>
+		<div class="col-md-3">
+			<input type="text" name= "FP2" class="form-control" id="FP2" placeholder="" ng-model="FP2" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="FP3" class="col-sm-2 control-label">Number of kids born alive</label>
+		<div class="col-md-2">
+			<input type="text" name= "FP3" class="form-control" id="FP3" placeholder="" ng-model="FP3" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="FP4" class="col-sm-2 control-label">Number of kids born dead</label>
+		<div class="col-md-2">
+			<input type="text" name= "FP4" class="form-control" id="FP4" placeholder="" ng-model="FP4" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="FP5" class="col-sm-2 control-label">Number of Miscarriages</label>
+		<div class="col-md-2">
+			<input type="text" name= "FP5" class="form-control" id="FP5" placeholder="" ng-model="FP5">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="FP6" class="col-sm-2 control-label">Number of kids alive</label>
+		<div class="col-md-3">
+			<input type="text" name= "FP6" class="form-control" id="FP6" placeholder="" ng-model="FP6">
+		</div>
+		<button type="submit" class="btn btn-default" ng-click="formStageOne()" ng-disabled="">Save</button>
+		<button type="submit" id="go-to-stage-2" class="btn btn-primary" ng-click="formStageOneSwitcher()">&raquo;</button></br></br>
+	</div>
+	</form>
+	{{messageOne}}
+</div>
+
+<div id="fp-stage-2" style="display:none; padding-left:5%;">
+	<h3>Past pregnancy results (PPR)</h3>
+	<form class="form-horizontal" role="form" name="form-fp-stage-2" id="form-fp-stage-2">
+	<div class="form-group">
+		<label for="FP7" class="col-sm-2 control-label">PPR year</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="FP7" id="FP7" placeholder="" ng-model="FP7" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="FP8" class="col-sm-2 control-label">Delivery means</label>
+		<div class="col-md-3">
+			<input type="text" name= "FP8" class="form-control" id="FP8" placeholder="" ng-model="FP8" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="FP9" class="col-sm-2 control-label">Place of birth</label>
+		<div class="col-md-2">
+			<input type="text" name= "FP9" class="form-control" id="FP9" placeholder="" ng-model="FP9" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="FP10" class="col-sm-2 control-label">Birth results</label>
+		<div class="col-md-2">
+			<input type="text" name= "FP10" class="form-control" id="FP10" placeholder="" ng-model="FP10" required>
+		</div>
+	</div>
+	<div style="padding-left:30%;">
+		<button type="submit" class="btn btn-default" ng-click="formStageTwo()" ng-disabled="">Save</button>
+		<button type="submit" id="go-to-stage-3" class="btn btn-primary" ng-click="formStageTwoSwitcher()">&raquo;</button></br></br>
+	</div>
+	</form>
+</div>
+
+
+<div id="fp-stage-3" style="display:none; padding-left:5%;">
+	<h4>Client's health history</h4>
+	<form class="" role="form" name="form-mother-stage-2" id="form-mother-stage-2">
+		<label for="FP11">Headache</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP11" id="FP11" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP11" id="FP11b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="FP12">Yellow fever</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP12" id="FP12" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP12" id="FP12b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="FP13">Heart disease</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP13" id="FP13" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP13" id="FP13b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="FP14">Blood pressure</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP14" id="FP14" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP14" id="FP14b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="FP15">Diabetes mellitus</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP15" id="FP15" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP15" id="FP15b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="FP16">Turbeculosis</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP16" id="FP16" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP16" id="FP16b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<div class="form-group">
+		<label for="FP17" class="col-sm-2 control-label">Additionals</label>
+		<div class="col-md-2">
+			<input type="textarea" name= "FP17" class="form-control" id="FP17" placeholder="" ng-model="FP17" required>
+		</div>
+		<div style="padding-left:30%;">
+			<button type="submit" class="btn btn-default" ng-click="formStageThree()" ng-disabled="">Save</button>
+			<button type="submit" id="go-to-stage-4" class="btn btn-primary" ng-click="formStageThreeSwitcher()">&raquo;</button></br></br>
+		</div>
+	</form>
+	{{messageThree}}
+</div>
+
+
+<div id="fp-stage-4" style="display:none;">
+<h3>Menstruation history</h3>
+	<form class="form-horizontal" role="form" name="form-fp-stage-4" id="form-fp-stage-4">
+	<div class="form-group">
+		<label for="FP18" class="col-sm-2 control-label">Last menstruation begin date</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="FP18" id="FP18" placeholder="" ng-model="FP18" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="FP19" class="col-sm-2 control-label">Menstruation duration (days)</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="FP19" id="FP19" placeholder="" ng-model="FP19" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="FP20" class="col-sm-2 control-label">Menstruation blood amount</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="FP20" id="FP20" placeholder="" ng-model="FP20" required>
+		</div>
+	</div>
+	<label for="FP21">Stomach ache during menstruation</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP21" id="FP21" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP21" id="FP21b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+	<div class="form-group">
+		<label for="FP22" class="col-sm-2 control-label">Weight</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="FP22" id="FP22" placeholder="" ng-model="FP22" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="FP23" class="col-sm-2 control-label">BP</label>
+		<div class="col-md-3">
+			<input type="text" class="form-control" name="FP23" id="FP23" placeholder="" ng-model="FP23" required>
+		</div>
+	</div>
+	<div style="padding-left:30%;">
+		<button type="submit" class="btn btn-default" ng-click="formStageFour()" ng-disabled="">Save</button>
+		<button type="submit" id="go-to-stage-5" class="btn btn-primary" ng-click="formStageFourSwitcher()">&raquo;</button></br></br>
+	</div>
+	</form>
+	{{messageFour}}
+</div>
+
+
+<div id="fp-stage-5" style="display:none; padding-left:5%;">
+	<h4>Past family planning method(s)</h4>
+	<div style="color:red">Fill in the information below</br></br></div>
+	<form class="" role="form" name="form-fp-stage-5" id="form-mother-stage-5">
+		<label for="FP24">Pills</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP24" id="FP24" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP24" id="FP24b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="FP25">Loop</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP25" id="FP25" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP25" id="FP25b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="FP26">Traditional</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP26" id="FP26" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP26" id="FP26b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="FP27">Condom</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP27" id="FP27" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP27" id="FP27b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="FP28">Others</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP28" id="FP28" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP28" id="FP28b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<label for="FP29">None</label>
+		<div class="form-group">
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP29" id="FP29" value="Yes"> Yes
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="FP29" id="FP29b" value="No" checked> No
+				</label>
+			</div>
+		</div>
+		<div style="padding-left:30%;">
+			<button type="submit" class="btn btn-default" ng-click="formStageFive()" ng-disabled="">Save</button>
+			<button type="submit" id="go-to-stage-5" class="btn btn-primary" ng-click="formStageFiveSwitcher()">&raquo;</button></br></br>
+		</div>
+	</form>
+	{{messageFive}}
+</div>
